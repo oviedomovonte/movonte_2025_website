@@ -500,3 +500,10 @@ html, body {
         opacity: 1 !important;
     }
 }
+.card p {
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  word-break: break-word;
+  line-height: 1.6;
+}
