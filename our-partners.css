@@ -328,43 +328,52 @@ footer {
 .slideshow-button {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-76%);
+  z-index: 2;
   background-color: #69aaff;
   border: none;
-  width: 50px; /* Tamaño ancho del botón */
-  height: 50px; /* Tamaño alto del botón */
+  color: white;
+  font-size: 2rem;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
   cursor: pointer;
-  text-align: center;
-  line-height: 50px; /* Centrar texto verticalmente */
-  border-radius: 50%; /* Círculo perfecto */
-  z-index: 10;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Sombra para resaltar */
   display: flex;
-  justify-content: center; /* Centrar horizontalmente */
-  align-items: center; /* Centrar verticalmente */
-}
-
-.slideshow-button.prev {
-  left: 50px; /* Más cerca entre botones */
-}
-
-.slideshow-button.next {
-  right: 50px; /* Más cerca entre botones */
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+  padding-top: px; 
 }
 
 .slideshow-button:hover {
-  background-color: #fc5e51;
-  transform: translateY(-50%) scale(1.1); /* Efecto de agrandamiento al pasar el mouse */
+  background-color: #4a88d2;
+}
+
+.slideshow-button.prev {
+  left: 10px;
+}
+
+.slideshow-button.next {
+  right: 10px;
 }
 
 /* Ajustes para la flecha */
 .slideshow-button::after {
-  content: '←'; /* Flecha predeterminada */
+  
   font-size: 1.5rem; /* Tamaño ajustado */
   font-weight: bold; /* Grosor extra */
   color: #fff; /* Color blanco */
 }
 
-.slideshow-button.next::after {
-  content: '→'; /* Flecha hacia la derecha */
+
+  .cards-container {
+  position: relative;
+}
+
+.slideshow-button.prev {
+  left: 8%;
+}
+
+.slideshow-button.next {
+  right: 8%;
 }
