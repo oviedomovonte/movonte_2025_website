@@ -42,6 +42,43 @@ document.addEventListener('DOMContentLoaded', function () {
         languageSelect.value = 'en';
         loadTranslations('en');
     }
+
+    // Slideshow functionality
+    const cardsContainer = document.querySelector('.cards-container');
+    const cards = document.querySelectorAll('.card');
+    const prevButton = document.createElement('button');
+    const nextButton = document.createElement('button');
+
+    prevButton.textContent = '←';
+    nextButton.textContent = '→';
+
+    // Add navigation buttons to the slideshow
+    prevButton.className = 'slideshow-button prev';
+    nextButton.className = 'slideshow-button next';
+
+    cardsContainer.parentElement.appendChild(prevButton);
+    cardsContainer.parentElement.appendChild(nextButton);
+
+    let currentIndex = 0;
+
+    function updateSlideshow() {
+        cards.forEach((card, index) => {
+            card.style.display = index === currentIndex ? 'block' : 'none';
+        });
+    }
+
+    prevButton.addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + cards.length) % cards.length;
+        updateSlideshow();
+    });
+
+    nextButton.addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % cards.length;
+        updateSlideshow();
+    });
+
+    // Initialize slideshow
+    updateSlideshow();
 });
 
 // Detectar idioma y tamaño de pantalla
