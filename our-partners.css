@@ -145,7 +145,7 @@ body {
 }
 
 .card.active {
-    display: block;
+    display: none;
 }
 
 .card img {
@@ -336,4 +336,3 @@ footer, .cintilla-footer {
         overflow-x: hidden;
     }
 }
-/* Hover para SVG */
