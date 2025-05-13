@@ -128,28 +128,28 @@ body {
     align-items: center;
     overflow: hidden;
     position: relative;
-    height: 400px;
+    height: 450px; /* Se mantiene el alto */
 }
 
 .card {
-    flex: 0 0 70%;
-    max-width: 70%;
+    flex: 0 0 auto;
+    width: 400px; /* Ahora el ancho es igual al alto para que sea cuadrado */
+    height: 450px; /* Altura igual al ancho */
     margin: auto;
     transition: transform 0.5s ease-in-out;
-    display: none;
     text-align: center;
     background: #1a1a1a;
     padding: 20px;
-    border-radius: 20px; !important;
+    border-radius: 0px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-}
-
-.card.active {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .card img {
-    width: 45%;
+    width: 80%; /* Ajusta el tamaño de la imagen dentro de la tarjeta */
     height: auto;
     margin-bottom: 10px;
     border-radius: 12px;
@@ -179,11 +179,11 @@ body {
 }
 
 .slideshow-button.prev {
-    left: 8%;
+    left: 29%;
 }
 
 .slideshow-button.next {
-    right: 8%;
+    right: 29%;
 }
 
 /* Sección Master Tech */
