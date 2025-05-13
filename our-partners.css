@@ -155,37 +155,37 @@ body {
     border-radius: 12px;
 }
 
-/* Botones del slideshow */
+/* Botones del slideshow con imágenes */
 .slideshow-button {
     position: absolute;
     top: 50%;
-    transform: translateY(-76%);
-    background-color: #69aaff;
-    color: #fff;
+    transform: translateY(-50%);
+    background-color: transparent; /* Fondo transparente */
     border: none;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
+    width: 60px; /* Ajusta el tamaño del botón */
+    height: 60px;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 2rem;
-    transition: background-color 0.3s ease;
+    transition: transform 0.3s ease-in-out; /* Transición para el hover */
 }
 
-.slideshow-button:hover {
-    background-color: #4a88d2;
+.slideshow-button img {
+    width: 100%; /* La imagen ocupa todo el botón */
+    height: auto;
+    filter: invert(100%); /* Hace que las flechas sean blancas */
 }
+
+
 
 .slideshow-button.prev {
-    left: 29%;
+    left: 26%;
 }
 
 .slideshow-button.next {
-    right: 29%;
+    right: 26%;
 }
-
 /* Sección Master Tech */
 .master-tech-section {
     background-color: #222;
