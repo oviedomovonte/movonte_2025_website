@@ -532,9 +532,8 @@ footer,
 }
 
 .about-us-image {
-  width: 55%;
-  max-width: 55vw;
-}
+  display: none;
+  }
 
 .about-us-image img {
   width: 100%;
