@@ -508,3 +508,37 @@ footer,
     right: 10px; /* Margen derecho */
   }
 }
+  /* Ajustes generales para que la portada ocupe todo el ancho en móviles */
+.about-section {
+  width: 100%;
+  padding: 20px; /* Un poco de espacio interior para que no toque bordes */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column; /* Apilar texto e imagen verticalmente */
+  align-items: left;    /* Centrar contenido */
+  text-align: left;     /* Mejor lectura en móvil */
+}
+
+.about-us-text {
+  width: 100%;
+  margin-bottom: 20px; /* Espacio abajo antes de la imagen */
+  color: white; /* Para que el texto destaque si fondo es oscuro */
+}
+
+.about-us-text h1, 
+.about-us-text h2, 
+.about-us-text p {
+  margin: 10px 0; /* Espaciado consistente */
+}
+
+.about-us-image {
+  width: 55%;
+  max-width: 55vw;
+}
+
+.about-us-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px; /* Opcional: bordes suaves para la imagen */
+}
