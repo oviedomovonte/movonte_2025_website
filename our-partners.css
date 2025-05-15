@@ -348,3 +348,165 @@ footer,
     overflow-x: hidden;
   }
 }
+/* Ajustes específicos para versión móvil */
+
+/* Ajustes específicos para versión móvil */
+
+/* Cambios en la portada */
+@media (max-width: 768px) {
+  .portada {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; /* Centrar el contenido */
+    padding: 10px;
+  }
+
+  .portada h1,
+  .portada h2,
+  .portada p,
+  .portada img {
+    max-width: 95%; /* Más ancho sin desbordar */
+    margin-bottom: 15px; /* Espaciado uniforme entre elementos */
+  }
+
+  .portada img {
+    width: 100%; /* Imagen ajustada al ancho del contenedor */
+    height: auto;
+  }
+}
+
+/* Ajustes en el slide de cards */
+@media (max-width: 768px) {
+  .cards-container {
+    position: relative;
+    display: flex;
+    flex-direction: column; /* Cambia la orientación para móvil */
+    align-items: center;
+  }
+
+  .card {
+    width: 90%; /* Mayor espacio para contenido */
+    margin-bottom: 20px; /* Espaciado entre las cards */
+    padding: 20px; /* Ajustar padding para más espacio de texto */
+    text-align: center; /* Centrar texto */
+    background: #1a1a1a;
+    border-radius: 10px; /* Bordes más suaves */
+  }
+
+  .card img {
+    margin-top: 15px; /* Margen superior entre imagen y borde */
+    margin-bottom: 10px; /* Margen inferior para separar el contenido */
+    width: 80%;
+    height: auto;
+    border-radius: 12px;
+  }
+
+  .slideshow-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px; /* Tamaño ajustado */
+    height: 40px;
+    z-index: 10;
+  }
+
+  .slideshow-button.prev {
+    left: -10%; /* Ajuste visible hacia el lado izquierdo */
+  }
+
+  .slideshow-button.next {
+    right: -10%; /* Ajuste visible hacia el lado derecho */
+  }
+}
+
+/* Evitar desplazamiento horizontal */
+@media (max-width: 768px) {
+  body,
+  html {
+    overflow-x: hidden; /* Prevenir desplazamiento horizontal */
+  }
+}
+
+/* Ajustes específicos para versión móvil */
+
+/* Portada */
+@media (max-width: 768px) {
+  .portada {
+    display: flex;
+    flex-direction: column; /* Asegura que los elementos estén en una sola columna */
+    align-items: center; /* Centra todos los elementos */
+    text-align: center; /* Centra el texto */
+    padding: 15px; /* Espaciado interno */
+    gap: 10px; /* Separación uniforme entre los elementos */
+  }
+
+  .portada h1,
+  .portada h2,
+  .portada p {
+    max-width: 95%; /* Ocupa casi todo el ancho de la pantalla */
+    margin: 0 auto; /* Centra los elementos horizontalmente */
+  }
+
+  .portada img {
+    width: 100%; /* Imagen ajustada al ancho del contenedor */
+    height: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+/* Slide de Cards */
+@media (max-width: 768px) {
+  .cards-container {
+    position: relative;
+    display: flex;
+    flex-direction: column; /* Disposición vertical */
+    align-items: center;
+    overflow: hidden; /* Evita desbordamientos */
+    width: 100%; /* Asegura que ocupe el ancho completo */
+  }
+
+  .card {
+    margin: 15px 0; /* Espaciado entre las cards */
+    padding: 20px; /* Espaciado interno */
+    width: 90%; /* Ajusta el ancho al 90% del contenedor */
+    text-align: center; /* Centra el contenido */
+    border-radius: 10px; /* Bordes redondeados */
+  }
+
+  .card img {
+    margin-top: 20px; /* Margen superior entre la imagen y el borde */
+    margin-bottom: 10px; /* Margen inferior para separar texto */
+    width: 80%; /* Imagen ocupando el 80% del ancho de la card */
+    height: auto;
+  }
+
+  .slideshow-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px; /* Tamaño ajustado */
+    height: 40px;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para visibilidad */
+    border-radius: 50%; /* Botones redondeados */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .slideshow-button img {
+    width: 20px; /* Tamaño de la flecha */
+    height: auto;
+  }
+
+  .slideshow-button.prev {
+    left: 10px; /* Margen izquierdo */
+  }
+
+  .slideshow-button.next {
+    right: 10px; /* Margen derecho */
+  }
+}
