@@ -433,27 +433,25 @@ footer,
 /* Portada */
 @media (max-width: 768px) {
   .portada {
-    display: flex;
-    flex-direction: column; /* Asegura que los elementos estén en una sola columna */
-    align-items: center; /* Centra todos los elementos */
-    text-align: center; /* Centra el texto */
-    padding: 15px; /* Espaciado interno */
-    gap: 10px; /* Separación uniforme entre los elementos */
-  }
+  display: flex;
+  flex-direction: column; /* Orden vertical */
+  align-items: center;     /* Centra los elementos horizontalmente */
+  text-align: center;      /* Centra el texto */
+  padding: 15px;           /* Margen interno */
+  gap: 10px;               /* Espaciado entre elementos */
+}
 
-  .portada h1,
-  .portada h2,
-  .portada p {
-    max-width: 95%; /* Ocupa casi todo el ancho de la pantalla */
-    margin: 0 auto; /* Centra los elementos horizontalmente */
-  }
+.portada h1,
+.portada h2,
+.portada p {
+  width: 95%;              /* Casi todo el ancho del viewport */
+  margin: 0 auto;          /* Centrado horizontal */
+}
 
-  .portada img {
-    width: 100%; /* Imagen ajustada al ancho del contenedor */
-    height: auto;
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
+.portada img {
+  width: 95%;              /* Imagen adaptada con margen estético */
+  height: auto;            /* Mantiene proporción */
+  margin: 10px auto;       /* Espacio arriba y abajo, centrada */
 }
 
 /* Slide de Cards */
