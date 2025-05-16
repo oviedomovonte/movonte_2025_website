@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // Detect language preference and load translations
-    const userLanguage = navigator.language.slice(0, 2); // Get the first two letters of the browser language
+    const userLanguage = navigator.language.slice(0, 2);
     if (userLanguage === 'es') {
         languageSelect.value = 'es';
         loadTranslations('es');
@@ -43,74 +43,72 @@ document.addEventListener('DOMContentLoaded', function () {
         loadTranslations('en');
     }
 
-    // Slideshow functionality
-    const cardsContainer = document.querySelector('.cards-container');
-    const cards = document.querySelectorAll('.card');
-    const prevButton = document.createElement('button');
-    const nextButton = document.createElement('button');
+    // Slideshow functionality solo en our_partners.html
+    if (window.location.pathname.includes('our_partners.html')) {
+        const cardsContainer = document.querySelector('.cards-container');
+        const cards = document.querySelectorAll('.card');
+        const prevButton = document.createElement('button');
+        const nextButton = document.createElement('button');
 
-    prevButton.textContent = '←';
-    nextButton.textContent = '→';
+        prevButton.textContent = '←';
+        nextButton.textContent = '→';
 
-    // Add navigation buttons to the slideshow
-    prevButton.className = 'slideshow-button prev';
-    nextButton.className = 'slideshow-button next';
+        prevButton.className = 'slideshow-button prev';
+        nextButton.className = 'slideshow-button next';
 
-    cardsContainer.parentElement.appendChild(prevButton);
-    cardsContainer.parentElement.appendChild(nextButton);
+        cardsContainer.parentElement.appendChild(prevButton);
+        cardsContainer.parentElement.appendChild(nextButton);
 
-    let currentIndex = 0;
+        let currentIndex = 0;
 
-    function updateSlideshow() {
-        cards.forEach((card, index) => {
-            card.style.display = index === currentIndex ? 'block' : 'none';
+        function updateSlideshow() {
+            cards.forEach((card, index) => {
+                card.style.display = index === currentIndex ? 'block' : 'none';
+            });
+        }
+
+        prevButton.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + cards.length) % cards.length;
+            updateSlideshow();
         });
+
+        nextButton.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % cards.length;
+            updateSlideshow();
+        });
+
+        updateSlideshow();
     }
-
-    prevButton.addEventListener('click', () => {
-        currentIndex = (currentIndex - 1 + cards.length) % cards.length;
-        updateSlideshow();
-    });
-
-    nextButton.addEventListener('click', () => {
-        currentIndex = (currentIndex + 1) % cards.length;
-        updateSlideshow();
-    });
-
-    // Initialize slideshow
-    updateSlideshow();
 });
 
 // Detectar idioma y tamaño de pantalla
 function adjustContentForSpanishMobile() {
-    const language = document.getElementById('language-select').value; // Obtener el idioma seleccionado
-    const isMobile = window.innerWidth <= 768; // Detectar si es móvil
+    const language = document.getElementById('language-select').value;
+    const isMobile = window.innerWidth <= 768;
 
     if (language === 'es' && isMobile) {
-        document.body.classList.add('es-mobile'); // Agregar clase si es español y móvil
+        document.body.classList.add('es-mobile');
     } else {
-        document.body.classList.remove('es-mobile'); // Remover clase si no es español o no es móvil
+        document.body.classList.remove('es-mobile');
     }
 }
 
-// Ejecutar al cargar la página y al cambiar el idioma o el tamaño de la pantalla
 window.addEventListener('load', adjustContentForSpanishMobile);
 window.addEventListener('resize', adjustContentForSpanishMobile);
 document.getElementById('language-select').addEventListener('change', adjustContentForSpanishMobile);
 
 document.addEventListener("DOMContentLoaded", function () {
-  const dropdownToggle = document.querySelector(".dropdown-toggle");
-  const dropdown = document.querySelector(".dropdown");
+    const dropdownToggle = document.querySelector(".dropdown-toggle");
+    const dropdown = document.querySelector(".dropdown");
 
-  dropdownToggle.addEventListener("click", function (e) {
-    e.preventDefault(); // Evita el comportamiento por defecto del enlace
-    dropdown.classList.toggle("active"); // Activa o desactiva el menú desplegable
-  });
+    dropdownToggle.addEventListener("click", function (e) {
+        e.preventDefault();
+        dropdown.classList.toggle("active");
+    });
 
-  // Cierra el dropdown si se hace clic fuera de él
-  document.addEventListener("click", function (e) {
-    if (!dropdown.contains(e.target) && !dropdownToggle.contains(e.target)) {
-      dropdown.classList.remove("active");
-    }
-  });
+    document.addEventListener("click", function (e) {
+        if (!dropdown.contains(e.target) && !dropdownToggle.contains(e.target)) {
+            dropdown.classList.remove("active");
+        }
+    });
 });
