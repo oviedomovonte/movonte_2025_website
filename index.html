@@ -12,48 +12,43 @@
     />
   </head>
   <body>
-    <div class="cintilla">
-      <span id="cintilla-text">sales@movonte.com</span>
-      <div class="language-selector">
-        <select id="language-select" class="language-select">
-          <option value="en">EN</option>
-          <option value="es">ES</option>
-        </select>
+    <!-- CINTILLA SUPERIOR ELIMINADA -->
+
+    <!-- Menú ahora pegado al borde superior -->
+    <div class="menu menu-top">
+      <div class="logo">
+        <img
+          src="https://cdn.glitch.global/c7c53932-d536-4753-aa79-26e52b4ca6ec/Logo-Negativo.png?v=1741547739124"
+          alt="Logo de MOVONTE"
+        />
+      </div>
+      <div class="menu-items" id="menu-items">
+        <a href="about-us.html" id="about us">About Us</a>
+        <div class="dropdown">
+          <a href="#services" id="services">Services</a>
+          <div class="dropdown-content">
+            <a href="consulting.html">Consulting Services</a>
+            <a href="managed.html">Managed Services</a>
+            <a href="custom_dev.html">Custom Development & Integrations</a>
+            <a href="end_to_end.html">IT Management</a>
+            <a href="migration.html">Migration & Merge Solutions</a>
+            <a href="license.html">License Management</a>
+            <a href="data.html">Data Analysis & Big Data Query</a>
+          </div>
+        </div>
+        <a href="our-partners.html" id="partners">Our Partners</a>
+        <a href="#movonte-way" id="movonte_way">Movonte way</a>
+        <a href="#consultation" class="button" id="schedule_consultation"
+          >Schedule a Consultation</a
+        >
+      </div>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
     </div>
-    <div class="menu">
-  <div class="logo">
-    <img
-      src="https://cdn.glitch.global/c7c53932-d536-4753-aa79-26e52b4ca6ec/Logo-Negativo.png?v=1741547739124"
-      alt="Logo de MOVONTE"
-    />
-  </div>
-  <div class="menu-items" id="menu-items">
-    <a href="about-us.html" id="about us">About Us</a>
-    <div class="dropdown">
-      <a href="#services" id="services">Services</a>
-      <div class="dropdown-content">
-        <a href="consulting.html">Consulting Services</a>
-        <a href="managed.html">Managed Services</a>
-        <a href="custom_dev.html">Custom Development & Integrations</a>
-        <a href="end_to_end.html">IT Management</a>
-        <a href="migration.html">Migration & Merge Solutions</a>
-        <a href="license.html">License Management</a>
-        <a href="data.html">Data Analysis & Big Data Query</a>
-      </div>
-    </div>
-    <a href="our-partners.html" id="partners">Our Partners</a>
-    <a href="#movonte-way" id="movonte_way">Movonte way</a>
-    <a href="#consultation" class="button" id="schedule_consultation"
-      >Schedule a Consultation</a
-    >
-  </div>
-  <div class="hamburger" id="hamburger">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-</div>
+
     <section class="portada">
       <img
         src="https://cdn.glitch.global/6179fd38-b072-4757-b3b0-f9be8226f186/wallpaper%20website%20movonte.jpg?v=1743038457623"
@@ -64,8 +59,8 @@
         Say Goodbye to Outdated Tech
         </h1>
        <h2 class="homepage-title">
-  Are incompatible systems and outdated tools impeding your business growth? These common tech issues can slow down your operations and hinder your progress.
-</h2>
+        Are incompatible systems and outdated tools impeding your business growth? These common tech issues can slow down your operations and hinder your progress.
+      </h2>
         <p>
           At Movonte, we meticulously align your technology and take care of virtually every detail to ensure seamless operations, enabling you to realize your company’s vision with greater clarity and focus. We understand the callenges of navigating complex IT environments.
         </p>
@@ -73,57 +68,56 @@
         <a href="#start" class="button" id="start_now">Let’s work on your solution</a>
       </div>
     </section>
-          
         
-      
-  <section class="our-code-section">
-  <h2>IT Solutions Crafted Just for you</h2>
-  <p>
-    Our process is defined always by your needs to truly understand what
-    your organization needs. Each of our tailored IT solutions meticulously
-    streamline and synchronize your systems, aligning them perfectly with
-    your business goals for maximum efficiency, clarity in operations, and
-    long-term cost savings. We firmly believe your technology should drive
-    your business forward, not hold it back.
-  </p>
-</section>
-
-      <br />
-      <div class="cards-container">
-        <div class="card">
-          <h3>Step 1</h3>
-          <h2>SYSTEM SCAN</h2>
-          <p>
-            We evaluate your current tech to uncover opportunities for
-            optimization and growth, laying the groundwork for a tailored
-            solution.
-          </p>
-        </div>
-        <div class="card">
-          <h3>Step 2</h3>
-          <h2>CUSTOM CODE</h2>
-          <p>
-            We develop a comprehensive strategy that integrates technology,
-            processes, and solutions to address your specific challenges and
-            goals.
-          </p>
-        </div>
-        <div class="card">
-          <h3>Step 3</h3>
-          <h2>SYNC IN</h2>
-          <p>
-            We seamlessly implement and integrate your solutions, ensuring a
-            smooth transition and optimal performance across your systems.
-          </p>
-        </div>
-      </div>
-      <br />
-      <div class="button-container">
-  <a href="#uncover-movonte-way" class="button" id="uncover_movonte_way">
-    Learn more about our values
-  </a>
-</div>
+    <section class="our-code-section">
+      <h2>IT Solutions Crafted Just for you</h2>
+      <p>
+        Our process is defined always by your needs to truly understand what
+        your organization needs. Each of our tailored IT solutions meticulously
+        streamline and synchronize your systems, aligning them perfectly with
+        your business goals for maximum efficiency, clarity in operations, and
+        long-term cost savings. We firmly believe your technology should drive
+        your business forward, not hold it back.
+      </p>
     </section>
+
+    <br />
+    <!-- Cards en formato vertical -->
+    <div class="cards-container vertical-cards">
+      <div class="card">
+        <h3>Step 1</h3>
+        <h2>SYSTEM SCAN</h2>
+        <p>
+          We evaluate your current tech to uncover opportunities for
+          optimization and growth, laying the groundwork for a tailored
+          solution.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Step 2</h3>
+        <h2>CUSTOM CODE</h2>
+        <p>
+          We develop a comprehensive strategy that integrates technology,
+          processes, and solutions to address your specific challenges and
+          goals.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Step 3</h3>
+        <h2>SYNC IN</h2>
+        <p>
+          We seamlessly implement and integrate your solutions, ensuring a
+          smooth transition and optimal performance across your systems.
+        </p>
+      </div>
+    </div>
+    <br />
+    <div class="button-container">
+      <a href="#uncover-movonte-way" class="button" id="uncover_movonte_way">
+        Learn more about our values
+      </a>
+    </div>
+
     <section class="master-tech-section">
       <h2>Why choose <span>Movonte</span>?</h2>
       <p class="centered-justified-text">
@@ -185,47 +179,47 @@
     <section class="master-tech-section">
       <h2>Our Partners in Tech Revolution</h2>
       <div class="marquee">
-  <div class="marquee-content">
-    <img src="https://cdn.glitch.global/c7c53932-d536-4753-aa79-26e52b4ca6ec/1.jpg?v=1742963027055" alt="Logo 1">
-    <img src="https://cdn.glitch.global/c7c53932-d536-4753-aa79-26e52b4ca6ec/2.jpg?v=1742963029622" alt="Logo 2">
-    <img src="https://cdn.glitch.global/c7c53932-d536-4753-aa79-26e52b4ca6ec/3.jpg?v=1742963033175" alt="Logo 3">
-    <img src="https://cdn.glitch.global/c7c53932-d536-4753-aa79-26e52b4ca6ec/4.jpg?v=1742963036964" alt="Logo 4">
-    <img src="https://cdn.glitch.global/c7c53932-d536-4753-aa79-26e52b4ca6ec/5.jpg?v=1742963040449" alt="Logo 4">
-    <!-- Se duplican para el efecto de bucle -->
-    <img src="https://cdn.glitch.global/c7c53932-d536-4753-aa79-26e52b4ca6ec/1.jpg?v=1742963027055" alt="Logo 1">
-    <img src="https://cdn.glitch.global/c7c53932-d536-4753-aa79-26e52b4ca6ec/2.jpg?v=1742963029622" alt="Logo 2">
-    <img src="https://cdn.glitch.global/c7c53932-d536-4753-aa79-26e52b4ca6ec/3.jpg?v=1742963033175" alt="Logo 3">
-    <img src="https://cdn.glitch.global/c7c53932-d536-4753-aa79-26e52b4ca6ec/4.jpg?v=1742963036964" alt="Logo 4">
-    <img src="https://cdn.glitch.global/c7c53932-d536-4753-aa79-26e52b4ca6ec/5.jpg?v=1742963040449" alt="Logo 4">
-     <img src="https://cdn.glitch.global/c7c53932-d536-4753-aa79-26e52b4ca6ec/1.jpg?v=1742963027055" alt="Logo 1">
-    <img src="https://cdn.glitch.global/c7c53932-d536-4753-aa79-26e52b4ca6ec/2.jpg?v=1742963029622" alt="Logo 2">
-    <img src="https://cdn.glitch.global/c7c53932-d536-4753-aa79-26e52b4ca6ec/3.jpg?v=1742963033175" alt="Logo 3">
-    <img src="https://cdn.glitch.global/c7c53932-d536-4753-aa79-26e52b4ca6ec/4.jpg?v=1742963036964" alt="Logo 4">
-    <img src="https://cdn.glitch.global/c7c53932-d536-4753-aa79-26e52b4ca6ec/5.jpg?v=1742963040449" alt="Logo 4">
-  </div>
-</div>
+        <div class="marquee-content">
+          <img src="https://cdn.glitch.global/c7c53932-d536-4753-aa79-26e52b4ca6ec/1.jpg?v=1742963027055" alt="Logo 1">
+          <img src="https://cdn.glitch.global/c7c53932-d536-4753-aa79-26e52b4ca6ec/2.jpg?v=1742963029622" alt="Logo 2">
+          <img src="https://cdn.glitch.global/c7c53932-d536-4753-aa79-26e52b4ca6ec/3.jpg?v=1742963033175" alt="Logo 3">
+          <img src="https://cdn.glitch.global/c7c53932-d536-4753-aa79-26e52b4ca6ec/4.jpg?v=1742963036964" alt="Logo 4">
+          <img src="https://cdn.glitch.global/c7c53932-d536-4753-aa79-26e52b4ca6ec/5.jpg?v=1742963040449" alt="Logo 4">
+          <!-- Se duplican para el efecto de bucle -->
+          <img src="https://cdn.glitch.global/c7c53932-d536-4753-aa79-26e52b4ca6ec/1.jpg?v=1742963027055" alt="Logo 1">
+          <img src="https://cdn.glitch.global/c7c53932-d536-4753-aa79-26e52b4ca6ec/2.jpg?v=1742963029622" alt="Logo 2">
+          <img src="https://cdn.glitch.global/c7c53932-d536-4753-aa79-26e52b4ca6ec/3.jpg?v=1742963033175" alt="Logo 3">
+          <img src="https://cdn.glitch.global/c7c53932-d536-4753-aa79-26e52b4ca6ec/4.jpg?v=1742963036964" alt="Logo 4">
+          <img src="https://cdn.glitch.global/c7c53932-d536-4753-aa79-26e52b4ca6ec/5.jpg?v=1742963040449" alt="Logo 4">
+          <img src="https://cdn.glitch.global/c7c53932-d536-4753-aa79-26e52b4ca6ec/1.jpg?v=1742963027055" alt="Logo 1">
+          <img src="https://cdn.glitch.global/c7c53932-d536-4753-aa79-26e52b4ca6ec/2.jpg?v=1742963029622" alt="Logo 2">
+          <img src="https://cdn.glitch.global/c7c53932-d536-4753-aa79-26e52b4ca6ec/3.jpg?v=1742963033175" alt="Logo 3">
+          <img src="https://cdn.glitch.global/c7c53932-d536-4753-aa79-26e52b4ca6ec/4.jpg?v=1742963036964" alt="Logo 4">
+          <img src="https://cdn.glitch.global/c7c53932-d536-4753-aa79-26e52b4ca6ec/5.jpg?v=1742963040449" alt="Logo 4">
+        </div>
+      </div>
       <br>
       <a href="#schedule-consultation" class="button" id="schedule_consultation"
         >Meet our partners</a
       >
     </section>
-<hr style="border: none; border-top: 1px solid #666666; width: 80%; margin: 20px auto;">
-<br>
-   <section class="mastery-section">
-  <h2>Achieve mastery in your operations</h2>
-  <p class="center-justify">
-    Say goodbye to the tech headaches that slow you down. With Movonte, your
-    systems work together seamlessly, making your day-to-day operations
-    smoother and more efficient. Imagine focusing on what you love—growing
-    your business and reaching your goals—without worrying about your IT. We
-    take care of the tech, so you can take care of what matters most.
-  </p>
-  <div class="button-container">
-    <a href="#schedule-consultation" class="button" id="schedule_consultation">
-      Schedule your consultation
-    </a>
-  </div>
-</section>
+    <hr style="border: none; border-top: 1px solid #666666; width: 80%; margin: 20px auto;">
+    <br>
+    <section class="mastery-section">
+      <h2>Achieve mastery in your operations</h2>
+      <p class="center-justify">
+        Say goodbye to the tech headaches that slow you down. With Movonte, your
+        systems work together seamlessly, making your day-to-day operations
+        smoother and more efficient. Imagine focusing on what you love—growing
+        your business and reaching your goals—without worrying about your IT. We
+        take care of the tech, so you can take care of what matters most.
+      </p>
+      <div class="button-container">
+        <a href="#schedule-consultation" class="button" id="schedule_consultation">
+          Schedule your consultation
+        </a>
+      </div>
+    </section>
 
     <section class="contact">
       <p>Contact us at:</p>
