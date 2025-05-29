@@ -5,56 +5,29 @@ body {
     font-family: "Darker Grotesque", Arial, sans-serif;
     margin: 0;
     padding: 0;
-    font-size: 1.5em; /* Ajusta el tamaño base del texto */
+    font-size: 1.5em;
 }
 
-/* Cintilla superior */
-.cintilla {
-    background-color: #0474ef;
-    color: #fff;
-    text-align: left;
-    padding: 10px 8px; /* Ajuste del padding para que todo se ajuste */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
+/* === CINTILLA SUPERIOR ELIMINADA === */
+.cintilla, .language-selector, .language-select {
+    display: none !important;
 }
 
-.language-selector {
-    display: flex;
-    gap: 4px; /* Ajuste del espacio entre elementos */
-}
-
-.language-select {
-    background-color: #000;
-    color: #69aaff; /* Azul corporativo */
-    border: 1px solid #69aaff;
-    padding: 2.75px; /* Reducido en un 25% */
-    font-size: 0.75em;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-.language-select option {
-    background-color: #000;
-    color: #69aaff;
-}
-
-/* Menú */
+/* Menú pegado al borde superior */
 .menu {
     background-color: #000;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 8px; /* Ajuste del padding para que todo se ajuste */
+    padding: 10px 8px;
     position: fixed;
     width: 100%;
-    top: 50px; /* Debajo de la cintilla superior */
+    top: 0;
     z-index: 999;
+    box-sizing: border-box;
 }
+
+.menu-top { top: 0 !important; }
 
 .menu .logo {
     width: 150px;
@@ -75,14 +48,13 @@ body {
     color: #fff;
     margin-right: 20px;
     text-decoration: none;
-    margin-top: 3mm; /* Añadir margen superior para bajar los enlaces */
+    margin-top: 3mm;
 }
 
-/* Botón "Schedule a Consultation" */
 .menu .menu-items .button {
     background-color: #69aaff;
     color: #fff;
-    padding: 5px 20px; /* Reducido el padding vertical */
+    padding: 5px 20px;
     border-radius: 20px;
     cursor: pointer;
     transition: transform 0.3s, background-color 0.3s;
@@ -96,29 +68,97 @@ body {
     background-color: #fc5e51;
 }
 
-/* Sección About Us */
-.about-section {
-    background-color: #000;
+/* Menú hamburguesa para móviles */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+.hamburger span {
+    background-color: #fff;
+    height: 2px;
+    margin: 4px 0;
+    width: 25px;
+}
+
+/* --- Ajuste de margen superior de las secciones principales --- */
+.portada,
+.about-section,
+.our-code-section,
+.master-tech-section,
+.our-clients,
+.our-partners,
+.mastery-section,
+.content {
+    margin-top: 70px !important;
+}
+
+/* Portada */
+.portada {
+    position: relative;
+    text-align: left;
+}
+
+.portada img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-top: 0;
+}
+
+.contenido-portada {
+    position: absolute;
+    top: 33%;
+    left: 10%;
+    z-index: 1;
+    text-align: left;
+    max-width: 90%;
+    margin-left: 0;
     display: flex;
-    justify-content: space-between;
-    padding: 50px 20px;
-    margin-top: 110px; /* Ajustar para compensar la altura de la cintilla y el menú */
+    flex-direction: column;
+    gap: 1.2rem;
 }
 
-.about-us-text {
-    flex: 1;
-    padding-right: 20px;
+.contenido-portada h1 {
+    font-size: 3em;
+    margin-bottom: 0;
+    line-height: 1.2;
 }
 
-.about-us-image {
-    flex: 1;
-    text-align: center;
-    background-color: transparent; /* Fondo transparente */
+.contenido-portada .homepage-title {
+    font-size: 1em;
+    line-height: 1.2;
+    width: 100%;
+    margin-bottom: 1em;
 }
 
-.about-us-image img {
-    width: 50%; /* Reducción al 50% del tamaño original */
-    height: auto; /* Mantiene la relación de aspecto */
+.contenido-portada p {
+    font-size: 1.1em;
+    margin-top: 0;
+    margin-bottom: 1em;
+    width: 100%;
+    line-height: 1;
+}
+
+.contenido-portada .button,
+.contenido-portada #start_now {
+    background-color: #fc5e51;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: transform 0.3s;
+    margin-top: 1em;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: 700;
+    align-self: flex-start;
+}
+
+.contenido-portada .button:hover,
+.contenido-portada #start_now:hover {
+    background-color: #4c8ed9;
+    transform: scale(1.05);
 }
 
 /* Sección Our Code */
@@ -126,23 +166,29 @@ body {
     background-color: #0474ef;
     text-align: center;
     padding: 50px 20px;
-    margin-top: 8.1cm; /* Aumentar el margen superior */
 }
 
-.cards-container {
+/* --- CARDS VERTICALES (STEP 1, 2, 3) --- */
+.cards-container,
+.vertical-cards {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column !important;
+    gap: 2rem;
+    align-items: stretch !important;
     margin: 20px 0;
 }
 
 .card {
-    background-color: #000;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 0 auto !important;
+    max-width: 480px;
+    width: 100%;
+    background-color: #1c1f26;
+    color: #fff;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    text-align: center;
     transition: transform 0.3s;
-    flex: 1;
-    margin: 0 10px;
 }
 
 .card img {
@@ -156,10 +202,11 @@ body {
     transform: scale(1.05);
 }
 
-.button {
+.button,
+.button-container .button {
     background-color: #69aaff;
     color: #fff;
-    padding: 5px 20px; /* Reducido el padding vertical */
+    padding: 5px 20px;
     border-radius: 20px;
     cursor: pointer;
     transition: transform 0.3s, background-color 0.3s;
@@ -169,9 +216,16 @@ body {
     margin-top: 20px;
 }
 
-.button:hover {
+.button:hover,
+.button-container .button:hover {
     transform: scale(1.1);
     background-color: #fc5e51;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
 }
 
 /* Sección Master Tech */
@@ -189,6 +243,58 @@ body {
     margin: 0 auto 20px auto;
 }
 
+/* Sección Our Clients */
+.our-clients {
+    background-color: #000;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.our-clients .reviews-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+}
+.review-card {
+    background: #1c1f26;
+    color: #fff;
+    padding: 1.2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.14);
+    max-width: 480px;
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+.review-card:last-child {
+    margin-bottom: 0;
+}
+
+/* Marquee partners */
+.marquee {
+    width: 100%;
+    overflow: hidden;
+    background: black;
+    padding: 10px 0;
+    white-space: nowrap;
+    margin: 0;
+}
+.marquee-content {
+    display: flex;
+    gap: 50px;
+    animation: marquee 20s linear infinite;
+    width: calc(200% + 50px);
+}
+.marquee-content img {
+    width: 150px;
+    height: auto;
+    display: inline-block;
+}
+@keyframes marquee {
+    from { transform: translateX(0);}
+    to { transform: translateX(-50%);}
+}
+
 /* Redes Sociales */
 .contact {
     display: flex;
@@ -198,264 +304,68 @@ body {
     padding: 20px 0;
     text-align: center;
 }
-
 .contact p {
     font-size: 1.2rem;
     font-weight: bold;
 }
-
-/* Ajuste del tamaño de los íconos */
 .contact-icons {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px; /* Espacio entre los íconos */
+    gap: 10px;
 }
-
-/* Estilos para los íconos en su estado normal */
 .contact-icons a img {
-    width: 30px;  /* Tamaño uniforme */
+    width: 30px;
     height: 30px;
     object-fit: contain;
     display: block;
     vertical-align: middle;
     transition: transform 0.3s ease, filter 0.3s ease;
     filter: brightness(0) saturate(100%) invert(38%) sepia(80%) saturate(747%) 
-        hue-rotate(180deg) brightness(106%) contrast(101%); /* Color inicial */
+        hue-rotate(180deg) brightness(106%) contrast(101%);
 }
-
-/* Ajuste para el primer ícono (LinkedIn) */
 .contact a:nth-of-type(1) img {
-    width: 28px; /* Se redujo un poco el primer ícono */
+    width: 28px;
     height: 28px;
-    transform: scale(0.739); /* Reduce el tamaño al 73.9% */
+    transform: scale(0.739);
 }
-
-/* Ajuste para el segundo ícono (Instagram) */
 .contact a:nth-of-type(2) img {
     width: 28px;
     height: 28px;
-    transform: scale(0.97); /* 25% más pequeño */
+    transform: scale(0.97);
 }
-
-/* Hover para SVG */
 .contact-icons a:hover img {
-    filter: brightness(0) saturate(100%) invert(68%) sepia(15%) saturate(4854%) hue-rotate(315deg) brightness(102%) contrast(101%); /* Color #FC5e51 */
-    transform: scale(1.1); /* Crece un 10% */
+    filter: brightness(0) saturate(100%) invert(68%) sepia(15%) saturate(4854%) hue-rotate(315deg) brightness(102%) contrast(101%);
+    transform: scale(1.1);
     transition: filter 0.3s ease, transform 0.3s ease;
 }
 
-/* Cintilla footer */
+/* Footer y cintilla inferior */
 .cintilla-footer {
     background-color: #0474ef;
     text-align: center;
     padding: 10px 20px;
 }
-
-/* Footer */
 footer {
     text-align: center;
     padding: 10px 20px;
 }
 
-/* Menú hamburguesa para móviles */
-.hamburger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-}
-
-.hamburger span {
-    background-color: #fff;
-    height: 2px;
-    margin: 4px 0;
-    width: 25px;
-}
-
-/* Portada */
-.portada {
-    position: relative;
-    text-align: left;
-    margin-top: 110px; /* Ajustar para compensar la altura de la cintilla y el menú */
-}
-
-.portada img {
-    width: 100%;
-    height: auto;
-    display: block;
-    margin-top: 3.5cm; /* Bajar la imagen de la portada 3.5 centímetros */
-}
-
-.contenido-portada {
-    position: absolute;
-    top: 9.5cm; /* Bajar todos los textos de la portada 3 centímetros */
-    left: 10%;
-    z-index: 1; /* Asegurar que los textos estén sobre la imagen */
-    text-align: left;
-    max-width: 90%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.contenido-portada h1 {
-    font-size: 3em;
-    margin-bottom: 0; /* Reducir el espacio entre el título y subtítulo */
-    line-height: 1.2;
-}
-
-.contenido-portada .homepage-title {
-    font-size: 1em; /* Reducir ligeramente el tamaño del texto */
-    line-height: 1.2; /* Reducir el espacio entre líneas */
-    width: 100%; /* Asegurar que abarca todo el ancho de la pantalla móvil */
-    margin-bottom: 1em; /* Espacio entre el subtítulo y el párrafo */
-}
-
-.contenido-portada p {
-    font-size: 1.1em;
-    margin-top: 0; /* Reducir el espacio entre el título y el subtítulo */
-    margin-bottom: 1em; /* Espacio entre el subtítulo y el botón */
-    width: 100%; /* Asegurar que abarca todo el ancho de la pantalla */
-    line-height: 1; /* Reducir el espaciado entre líneas */
-}
-
-.contenido-portada .button {
-    background-color: #fc5e51;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: transform 0.3s;
-    margin-top: 1em; /* Espacio entre el subtítulo y el botón */
-    text-decoration: none;
-    display: inline-block;
-    font-weight: 700;
-    align-self: center; /* Centrar el botón en la pantalla */
-}
-
-/* Sección Why Choose Movonte */
-.why-choose-movonte {
-    background-color: #000; /* Cambiar fondo a negro */
-    padding: 50px 20px;
-    margin-top: 6cm; /* Bajar todo el contenido 3 centímetros más */
-}
-
-.why-choose-movonte p {
-    hyphens: auto;
-    word-wrap: break-word;
-    text-align: justify;
-    width: 100%; /* Asegurar que abarca todo el ancho de la pantalla */
-}
-
-/* Sección Our Clients */
-.our-clients {
-    background-color: #000;
-    text-align: center;
-    padding: 50px 20px;
-    margin-top: 6cm; /* Bajar todo el contenido 3 centímetros más */
-}
-
-.our-clients .clients-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-}
-
-.our-clients .client {
-    flex: 1 1 45%;
-    max-width: 45%;
-    margin: 10px;
-}
-
-/* Sección Experience the Difference */
-.experience-difference {
-    background-color: #000;
-    padding: 50px 20px;
-    margin-top: 6cm; /* Bajar todo el contenido 3 centímetros más */
-}
-
-.experience-difference p {
-    hyphens: auto;
-    word-wrap: break-word;
-    text-align: justify;
-}
-
-/* Sección Our Partners */
-.our-partners {
-    background-color: #000;
-    padding: 50px 20px;
-    margin-top: 6cm; /* Bajar todo el contenido 3 centímetros más */
-}
-
-.marquee {
-    width: 100%;
-    overflow: hidden;
-    background: black; /* Fondo negro */
-    padding: 10px 0;
-    white-space: nowrap; /* Evita que el contenido salte de línea */
-    margin: 0; /* Eliminar el espacio entre el borde izquierdo y la marquesina */
-}
-
-.marquee-content {
-    display: flex;
-    gap: 50px; /* Espacio entre logos */
-    animation: marquee 20s linear infinite;
-    width: calc(200% + 50px); /* Ajusta el ancho al doble del viewport */
-}
-
-.marquee-content img {
-    width: 150px; /* Ajusta el tamaño según necesites */
-    height: auto;
-    display: inline-block;
-}
-
-/* Animación */
-@keyframes marquee {
-    from {
-        transform: translateX(0);
-    }
-    to {
-        transform: translateX(-50%);
-    }
-}
-
-/* Estilos específicos para dispositivos móviles */
+/* Responsive */
 @media (max-width: 768px) {
     body {
         background-color: #000;
         color: #fff;
-        overflow-x: hidden; /* Prevenir desplazamiento horizontal */
+        overflow-x: hidden;
     }
-
-    .cintilla {
-        background-color: #0474ef; /* Mantener el azul corporativo */
-        position: fixed;
-        width: 100%;
-        top: 0;
-        z-index: 1000;
-        padding: 10px 8px; /* Ajuste del padding para que todo se ajuste */
-    }
-
-    .language-selector {
-        gap: 4px; /* Ajuste del espacio entre elementos */
-    }
-
     .menu {
-        background-color: #000; /* Cambiar fondo a negro */
-        position: fixed;
-        width: 100%;
-        top: 50px; /* Debajo de la cintilla superior */
-        z-index: 999;
-        padding: 10px 8px; /* Ajuste del padding para que todo se ajuste */
+        padding: 10px 8px;
     }
-
     .hamburger {
-        display: flex; /* Mostrar el botón hamburguesa en móvil */
+        display: flex;
     }
-
     .menu .menu-items {
-        display: none; /* El menú está oculto por defecto en móvil */
+        display: none;
         flex-direction: column;
         width: 100%;
         text-align: center;
@@ -465,107 +375,91 @@ footer {
         background-color: #000;
         z-index: 1;
     }
-
     .menu .menu-items a {
         margin: 10px 0;
     }
-
     .menu .menu-items.active {
-        display: flex; /* Mostrar el menú cuando se activa */
+        display: flex;
     }
-
     .about-section {
         flex-direction: column;
         align-items: center;
-        margin-top: 100px; /* Espacio para la cintilla y el menú */
+        margin-top: 100px;
     }
-
     .about-us-text {
         padding-right: 0;
-        text-align: right; /* Justificado a la derecha */
-        hyphens: auto; /* Habilitar guiones automáticos */
+        text-align: right;
+        hyphens: auto;
     }
-
     .about-us-image {
         margin-top: 20px;
-        text-align: center; /* Centra la imagen */
+        text-align: center;
     }
-
     .about-us-image img {
-        width: 100%; /* Ajusta la imagen al tamaño de la pantalla */
-        height: auto; /* Mantiene la relación de aspecto */
+        width: 100%;
+        height: auto;
     }
-
     .our-code-section {
-        background-color: #000; /* Cambiar fondo a negro */
+        background-color: #000;
     }
-
-    .our-code-section .cards-container {
-        flex-direction: column;
-        align-items: center;
+    .cards-container,
+    .vertical-cards {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 1.5rem !important;
     }
-
     .card {
-        margin: 10px 0;
-        text-align: center; /* Centra el texto */
-        hyphens: auto; /* Habilitar guiones automáticos */
+        margin: 10px 0 !important;
+        text-align: center;
+        hyphens: auto;
+        width: 98vw;
+        max-width: 98vw;
     }
-
     .button {
-        padding: 10px 20px; /* Ajuste del padding para que los botones no se corten */
+        padding: 10px 20px;
+        font-size: 1em;
     }
-
     .centered-justified-text {
-        padding: 10px; /* Ajuste del padding para que el texto sea visible */
+        padding: 10px;
     }
-
     .contact {
-        padding: 10px 0; /* Ajuste del padding para que el texto sea visible */
+        padding: 10px 0;
     }
-
     .portada {
-        margin-top: 0; /* Eliminar el espacio negro */
+        margin-top: 60px !important;
     }
-
     .contenido-portada {
-        top: 70%;
+        position: absolute;
+        top: 60%;
         left: 5%;
         transform: translateY(-50%);
-        padding: 0 20px;
-        text-align: left;
+        padding: 0 10px;
+        margin-left: 0;
+        font-size: 1em;
     }
-
     .contenido-portada h1 {
         font-size: 1.5em;
         margin-bottom: 5px;
-        margin-top: 311px;
+        margin-top: 0;
     }
-
     .contenido-portada .homepage-title {
-        font-size: 1em; /* Reducir ligeramente el tamaño del texto */
-        line-height: 1.2; /* Reducir el espacio entre líneas */
-        width: 100%; /* Asegurar que abarca todo el ancho de la pantalla móvil */
-        margin-bottom: 1em; /* Espacio entre el subtítulo y el párrafo */
-    margin-top: 9px;
-  }
-
+        font-size: 1em;
+        line-height: 1.2;
+        width: 100%;
+        margin-bottom: 1em;
+        margin-top: 9px;
+    }
     .contenido-portada p {
         font-size: 1em;
         margin-top: 1px;
     }
-
     .contenido-portada .button {
         padding: 8px 16px;
         font-size: 0.8em;
         margin-top: -10px;
     }
-
     .content {
         margin-top: 100px;
-    }
-
-    .imagen-espacio img {
-        width: 75%;
     }
 }
 
@@ -573,177 +467,5 @@ footer {
 html, body {
     box-sizing: border-box;
     width: 100%;
-    overflow-x: hidden; /* Evitar desplazamiento horizontal */
-}
-
-/* Ajuste de la cintilla para evitar que los elementos se corten */
-.cintilla {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding: 10px 12px; /* Aumentar padding lateral */
-    box-sizing: border-box;
-}
-
-/* Ajuste del menú para evitar que el botón hamburguesa se salga */
-.menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding: 10px 12px; /* Asegurar que todo se mantenga dentro de la pantalla */
-    box-sizing: border-box;
-}
-
-/* Asegurar que el selector de idioma no se salga */
-.language
-
-/* Sección Master Tech */
-.master-tech-section {
-    background-color: #000; /* Cambiar fondo a negro */
-    text-align: center;
-    padding: 50px 20px;
-}
-
-.centered-justified-text {
-    color: #fff;
-    text-align: justify;
-    text-align-last: center;
-    max-width: 800px;
-    margin: 0 auto 20px auto;
-    hyphens: auto; /* Habilitar guiones automáticos */
-    word-wrap: break-word; /* Permitir cortes de palabras */
-}
-
-/* Sección Our Clients */
-.our-clients {
-    background-color: #000;
-    text-align: center;
-    padding: 50px 20px;
-    margin-top: .5cm; /* Bajar todo el contenido 3 centímetros más */
-}
-
-.our-clients h2 {
-    white-space: pre-line; /* Permitir saltos de línea */
-}
-
-.our-clients .centered-justified-text {
-    color: #fff;
-    text-align: justify;
-    text-align-last: center;
-    max-width: 800px;
-    margin:;
-    font-size: 1em; /* Reducir ligeramente el tamaño del texto */
-    padding: 0 20px; /* Añadir márgenes laterales */
-}
-
-.mastery-section .center-justify {
-    margin-left: 3cm;
-    margin-right: 3cm;
-    text-align: justify;
-   padding: 0 20px;
-}
-
-.marquee {
-    width: 100%;
-    overflow: hidden;
-    background: black; /* Fondo negro */
-    padding: 0; /* Eliminar padding lateral */
-    white-space: nowrap; /* Evita que el contenido salte de línea */
-    margin: 0; /* Eliminar márgenes */
-}
-
-.marquee-content {
-    display: flex;
-    gap: 50px; /* Espacio entre logos */
-    animation: marquee 20s linear infinite;
-    width: calc(280% + 50px); /* Ajusta el ancho al doble del viewport */
-    margin: -40; /* Eliminar márgenes */
-    padding: -28; /* Eliminar padding */
-}
-
-.master-tech-section {
-    background-color: #000; /* Cambiar fondo a negro */
-}
-
-.steps-cards-container {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  padding: 1rem;
-}
-
-/* Estilo de las tarjetas */
-.steps-cards-container .card {
-  background-color: #f5f5f5;
-  padding: 1.5rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-}
-
-/* Responsive: en pantallas grandes, que se acomoden en fila si deseas */
-@media (min-width: 768px) {
-  .steps-cards-container {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  .steps-cards-container .card {
-    flex: 1;
-    margin: 0 0.5rem;
-  }
-}
-.steps-cards-container .card {
-  background-color: #1c1f26;  /* Gris Oxford */
-  color: #ffffff;             /* Texto blanco para contraste */
-  padding: 1.5rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  text-align: center;         /* Centrado del texto opcional */
-}
-.button-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 2rem;
-}
-.our-code-section p {
-  margin: 0 auto;
-  max-width: 700px;          /* Controla el ancho para buena legibilidad */
-  text-align: center;          /* O 'center' si quieres que el texto también esté centrado */
-  line-height: 1.6;
-  font-size: inherit;        /* Respeta el tamaño que ya tienes por default */
-  word-break: normal;        /* No fuerza cortes raros en palabras */
-  hyphens: none;             /* Evita guiones automáticos */
-  padding: 1rem;
-}
-.contenido-portada {
-  margin-left: -0.5cm;  /* Mueve medio centímetro hacia la izquierda */
-}
-
-.contenido-portada {
-  margin-left: -0.5cm;
-  display: flex;
-  flex-direction: column;
-  gap: 1.2rem; /* Espacio entre textos y botón */
-  max-width: 800px;
-}
-
-.contenido-portada #start_now {
-  align-self: flex-start;
-  background-color: #fc5e51;
-  color: #fff;
-  padding: 5px 20px;
-  border-radius: 20px;
-  cursor: pointer;
-  transition: transform 0.3s, background-color 0.3s;
-  text-decoration: none;
-  display: inline-block;
-  font-weight: 700;
-  margin-top: -68px;
-}
-
-.contenido-portada #start_now:hover {
-  background-color: #4c8ed9;
-  transform: scale(1.05);
+    overflow-x: hidden;
 }
