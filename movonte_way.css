@@ -1,0 +1,485 @@
+/* Estilos generales */
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: "Darker Grotesque", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 1.5em; /* Ajusta el tamaño base del texto */
+}
+
+/* Cintilla superior */
+.cintilla {
+    background-color: #0474ef;
+    color: #fff;
+    text-align: left;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.language-selector {
+    display: flex;
+    gap: 10px;
+}
+
+.language-select {
+    background-color: #000;
+    color: #69aaff; /* Azul corporativo */
+    border: 1px solid #69aaff;
+    padding: 3.75px; /* Reducido en un 25% */
+    font-size: 0.75em;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.language-select option {
+    background-color: #000;
+    color: #69aaff;
+}
+
+/* Menú */
+.menu {
+    background-color: #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: relative;
+}
+
+.menu .logo {
+    width: 150px;
+    height: auto;
+}
+
+.menu .logo img {
+    width: 100%;
+    height: auto;
+}
+
+.menu .menu-items {
+    display: flex;
+    align-items: center;
+}
+
+.menu .menu-items a {
+    color: #fff;
+    margin-right: 20px;
+    text-decoration: none;
+}
+
+/* Botón "Schedule a Consultation" */
+.menu .menu-items .button {
+    background-color: #69aaff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: 700;
+}
+
+.menu .menu-items .button:hover {
+    transform: scale(1.1);
+    background-color: #fc5e51;
+}
+
+/* Portada */
+.portada {
+    position: relative;
+    text-align: left;
+}
+
+.portada img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.contenido-portada {
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    transform: translateY(-50%);
+    text-align: left;
+    max-width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.contenido-portada h1 {
+    font-size: 3.3em;
+    margin-bottom: -7; /* Reducir el espacio entre el título y subtítulo */
+    line-height: 1.2;
+}
+
+.contenido-portada p {
+    font-size: 1.5em;
+    margin-top: 0;
+    margin-bottom: 0;
+    max-width: 888px; /* Cambia este valor según lo que necesites */
+    margin-left: 3px;
+    margin-right: auto;
+}
+
+.contenido-portada .button {
+    background-color: #fc5e51;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: transform 0.3s;
+    margin-top: 0; /* Espacio entre el subtítulo y el botón */
+    text-decoration: none;
+    display: inline-block;
+    font-weight: 700;
+}
+
+.contenido-portada .button:hover {
+    transform: scale(1.1);
+}
+
+/* Contenido general */
+.content {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+/* Ajuste de párrafos */
+#intro_paragraph,
+#core_mission {
+    text-align: justify; /* Justifica el texto */
+    margin: 0 auto 20px auto; /* Espaciado uniforme */
+    max-width: 800px;
+}
+
+/* Ajuste de imagen con espacio proporcional */
+.imagen-espacio {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0; /* Espaciado uniforme arriba y abajo */
+}
+
+.imagen-espacio img {
+    width: 75%; /* Aumentar la imagen al 75% en móvil */
+    height: auto;
+}
+
+/* Sección de Contacto */
+.contact {
+    display: flex;
+    flex-direction: column; /* Apila los elementos */
+    align-items: center; /* Centra el contenido */
+    gap: 10px;
+    padding: 20px 0;
+}
+
+.contact p {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.contact-icons {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espacio entre los íconos */
+}
+
+/* Ajuste del tamaño de los íconos */
+.contact a img {
+    width: 30px;  /* Tamaño uniforme */
+    height: 30px;
+    object-fit: contain;
+    display: block;
+    vertical-align: middle;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    filter: brightness(0) saturate(100%) invert(38%) sepia(80%) saturate(747%) 
+        hue-rotate(180deg) brightness(106%) contrast(101%); /* Color inicial */
+}
+
+/* Ajuste para el primer ícono (LinkedIn) */
+.contact a:nth-of-type(1) img {
+    width: 28px; /* Se redujo un poco el primer ícono */
+    height: 28px;
+    transform: scale(0.739); /* Reduce el tamaño al 80% */
+}
+
+/* Ajuste para el segundo ícono (Instagram) */
+.contact a:nth-of-type(2) img {
+    width: 28px;
+    height: 28px;
+    transform: scale(0.97); /* 25% más pequeño */
+}
+
+/* Cintilla footer */
+.cintilla-footer {
+    background-color: #0474ef;
+    text-align: center;
+    padding: 10px 20px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px 20px;
+}
+
+/* Menú hamburguesa para móviles */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    background-color: #fff;
+    height: 2px;
+    margin: 4px 0;
+    width: 25px;
+}
+
+@media (max-width: 768px) {
+    .menu .menu-items {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #000;
+        z-index: 1;
+    }
+
+    .menu .menu-items a {
+        margin: 10px 0;
+    }
+
+    .menu .menu-items.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .contenido-portada {
+        top: 70%;
+        left: 5%;
+        transform: translateY(-50%);
+    }
+
+    .contenido-portada h1 {
+        font-size: 1.5em;
+        margin-bottom: 5px;
+        margin-top: 30px;
+    }
+
+    .contenido-portada p {
+        font-size: 1em;
+        margin-top: 20px; 
+    }
+
+    .contenido-portada .button {
+        padding: 8px 16px;
+        font-size: 0.8em;
+        margin-top: -10px; 
+    }
+
+    .content {
+        margin-top: 100px;
+    }
+
+    .imagen-espacio img {
+        width: 75%; 
+    }
+}
+
+/* Ajustes en pantallas grandes (Desktop) */
+@media (min-width: 768px) {
+    .contenido-portada h1 {
+        margin-bottom: 20px; /* Espacio entre el título y el párrafo */
+    }
+
+    .contenido-portada p {
+        margin-bottom: 20px; /* Espacio entre el párrafo y el botón */
+    }
+
+    .contenido-portada .button {
+        margin-top: 0; /* Eliminar margen superior del botón */
+    }
+
+    .imagen-espacio img {
+        width: 50%; /* Reducir al 50% la imagen de los partners */
+    }
+
+    .streamline-operations {
+        white-space: pre-line;
+    }
+}
+
+/* Ajuste del tamaño de los títulos */
+#simplify_innovation {
+    line-height: 1;
+    font-size: 3.5rem;
+}
+/* Ajustes en pantallas grandes (Desktop) */
+@media (min-width: 768px) {
+    .contenido-portada h1 {
+        margin-bottom: 20px; /* Espacio entre el título y el párrafo */
+    }
+
+    .contenido-portada p.streamline-operations {
+        margin-bottom: 20px; /* Espacio entre el párrafo y el botón */
+        margin-top: -17px; /* Subir el párrafo 1 centímetro (10px) */
+    }
+
+    .contenido-portada .button {
+        margin-top: 0; /* Eliminar margen superior del botón */
+    }
+
+    .imagen-espacio img {
+        width: 50%; /* Reducir al 50% la imagen de los partners */
+    }
+
+    .streamline-operations {
+        white-space: pre-line;
+    }
+}
+/* Ajustes en móvil */
+@media (max-width: 768px) {
+    .contenido-portada .button {
+        margin-top: 10px; /* Bajar el botón 1 centímetro (10px) */
+    }
+}
+
+/* Ajustes en móvil para español */
+@media (max-width: 768px) {
+    .es-mobile #intro_paragraph,
+    .es-mobile #core_mission,
+    .es-mobile .imagen-espacio,
+    .es-mobile .contact {
+        margin-top: 10px; /* Mover el contenido 1 centímetro hacia abajo */
+    }
+}
+
+/* Hover para SVG */
+.contact-icons a:hover img {
+  filter: brightness(0) saturate(100%) invert(68%) sepia(15%) saturate(4854%) hue-rotate(338deg) brightness(102%) contrast(101%); /* Color #FC5e51 */
+  transform: scale(1.1); /* Crece un 10% */
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+/* Ajuste del tamaño de los íconos */
+.contact a img {
+    width: 30px;  /* Tamaño uniforme */
+    height: 30px;
+    object-fit: contain;
+    display: block;
+    vertical-align: middle;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    filter: brightness(0) saturate(100%) invert(38%) sepia(80%) saturate(747%) 
+        hue-rotate(180deg) brightness(106%) contrast(101%); /* Color inicial */
+}
+
+/* Ajuste para el primer ícono (LinkedIn) */
+.contact a:nth-of-type(1) img {
+    width: 28px; /* Se redujo un poco el primer ícono */
+    height: 28px;
+    transform: scale(0.739); /* Reduce el tamaño al 73.9% */
+}
+
+/* Hover para SVG */
+.contact-icons a:hover img {
+  filter: brightness(0) saturate(100%) invert(68%) sepia(15%) saturate(4854%) hue-rotate(315deg) brightness(102%) contrast(101%); /* Color #FC5e51 */
+  transform: scale(1.1); /* Crece un 10% */
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover específico para el primer ícono (LinkedIn) */
+.contact a:nth-of-type(1):hover img {
+  transform: scale(0.769); /* Crece un 3% adicional */
+}
+
+/* Hover para SVG */
+.contact-icons a:hover img {
+    filter: brightness(0) saturate(100%) invert(68%) sepia(15%) saturate(4854%) hue-rotate(315deg) brightness(102%) contrast(101%); /* Color #FC5e51 */
+    transform: scale(1.1); /* Crece un 10% */
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+/* Ajuste de los íconos */
+.contact a img {
+    width: 30px;  /* Tamaño uniforme */
+    height: 30px;
+    object-fit: contain;
+    display: block;
+    vertical-align: middle;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    filter: brightness(0) saturate(100%) invert(38%) sepia(80%) saturate(747%) hue-rotate(180deg) brightness(106%) contrast(101%); /* Color inicial */
+}
+
+/* Ajuste para el primer ícono (LinkedIn) */
+.contact a:nth-of-type(1) img {
+    width: 28px;
+    height: 28px;
+    transform: scale(0.739); /* Reduce el tamaño al 73.9% */
+}
+
+/* Ajuste para el segundo ícono (Instagram) */
+.contact a:nth-of-type(2) img {
+    width: 28px;
+    height: 28px;
+    transform: scale(0.97); /* 25% más pequeño */
+}
+.card-section {
+  display: flex;
+  padding: 2rem;
+  border-radius: 1rem;
+  max-width: 1200px;
+  margin: auto;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.card {
+  background-color: #2c2c2c; /* gris Oxford */
+  flex: 1 1 0;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 0; /* evita que se desborden */
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.1);
+}
+
+.card-text {
+  font-weight: normal;
+  color: #cccccc;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.card-icon {
+  width: 60px;
+  height: 60px;
+  filter: brightness(0) invert(1); /* blanco */
+  margin-top: auto;
+}
+.texto_medio{
+  display: center;
+}
